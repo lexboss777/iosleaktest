@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leaktest", "leaktest\leaktest.csproj", "{D3542220-34A6-4A05-9076-BE143B6DF59B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Debug|x86.ActiveCfg = Debug|iPhoneSimulator
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Debug|x86.Build.0 = Debug|iPhoneSimulator
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Release|x86.ActiveCfg = Release|iPhone
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Release|x86.Build.0 = Release|iPhone
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Release|iPhone.ActiveCfg = Release|iPhone
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Release|iPhone.Build.0 = Release|iPhone
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{D3542220-34A6-4A05-9076-BE143B6DF59B}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+EndGlobal

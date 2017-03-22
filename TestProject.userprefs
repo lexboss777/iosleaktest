@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{D3542220-34A6-4A05-9076-BE143B6DF59B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="leaktest/AppDelegate.cs">
+    <Files>
+      <File FileName="leaktest/AppDelegate.cs" Line="8" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/user/Projects/TestProject/Simple/Program.cs" relfile="Simple/Program.cs" line="46" column="1" />
+      <Breakpoint file="/Users/user/Projects/CommonClasses/Utility.Core/Logger/LogManager.cs" line="219" column="13" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.leaktest PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.176B629D-60C5-42F6-973A-2D1AC33FB8B4" />
+  <MultiItemStartupConfigurations />
+</Properties>
