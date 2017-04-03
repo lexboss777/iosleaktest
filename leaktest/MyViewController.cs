@@ -51,14 +51,11 @@ namespace leaktest
 			// Release any cached data, images, etc that aren't in use.
 		}
 
-		Task RunTestWorker(string somePdfFilePath)
+		void RunTestWorker()
 		{
-			return Task.Run(() =>
-				{
-					TestMethod(somePdfFilePath);
-
-					Console.WriteLine("Completed!");
-				});
+			var somePdfFilePath = "gre_research_validity_data.pdf";
+			TestMethod(somePdfFilePath);
+			Console.WriteLine("Completed!");
 		}
 
 		async void Btn_TouchUpInside(object sender, EventArgs e)
@@ -66,7 +63,8 @@ namespace leaktest
 			Task t = null;
 			try
 			{
-				t = RunTestWorker("gre_research_validity_data.pdf");
+				t = new Task(RunTestWorker);
+				t.Start();
 				await t;
 			}
 			catch (Exception ex)
@@ -80,6 +78,9 @@ namespace leaktest
 				t = null;
 
 				btn.TouchUpInside -= Btn_TouchUpInside;
+				btn.RemoveFromSuperview();
+				btn.Dispose();
+				btn = null;
 			}
 		}
 
@@ -104,7 +105,7 @@ namespace leaktest
 
 						if (pdfLoaded)
 						{
-							for (int Y = 0; Y < 10; Y++)
+							for (int Y = 0; Y < 5; Y++)
 							{
 								for (int i = 0; i < pdfDocument.PageCount; i++)
 								{
@@ -141,15 +142,10 @@ namespace leaktest
 				using (var uimg = ((UIImage)img))
 				{
 
-				using (NSData data = uimg.AsJPEG(0.4f))
-				{ // Memory leak occurs only with this line. If comment this, memory leak will no occur.
-
-				}
-				//var wr = new WeakReference<UIImage>(img.image);
-				//using (NSData data = MyAsJPEG(img.image.Handle, 0.4f))
-				//{ // Memory leak occurs only with this line. If comment this, memory leak will no occur.
+					using (NSData data = uimg.AsJPEG(0.4f))
+					{ // Memory leak occurs only with this line. If comment this, memory leak will no occur.
 					
-				//}
+					}
 				}
 
 				if (err != null)
