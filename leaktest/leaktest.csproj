@@ -21,8 +21,6 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchFastDev>false</MtouchFastDev>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <IOSDebuggerPort>46236</IOSDebuggerPort>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386</MtouchArch>
@@ -30,6 +28,7 @@
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <PlatformTarget>x86</PlatformTarget>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchProfiling>true</MtouchProfiling>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>pdbonly</DebugType>
@@ -39,8 +38,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
@@ -57,8 +54,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
@@ -76,9 +71,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchFastDev>true</MtouchFastDev>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchFastDev>false</MtouchFastDev>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
@@ -107,6 +100,10 @@
     <Compile Include="Utils\PDFDocument.cs" />
     <Compile Include="Utils\MuPDFLib.cs" />
     <Compile Include="Utils\NativeBitmap.cs" />
+    <Compile Include="MyViewController.cs" />
+    <Compile Include="MyViewController.designer.cs">
+      <DependentUpon>MyViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\gre_research_validity_data.pdf">
@@ -118,6 +115,9 @@
       <Kind>Static</Kind>
       <SmartLink>False</SmartLink>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MyViewController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
